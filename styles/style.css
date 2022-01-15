@@ -5,15 +5,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: #3a3a3a;
 }
-main {
-  margin: 70px 120px 0px 120px;
-}
 /* Typo */
 .logo {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+  margin: 50px 0px;
 }
 .section-heading {
   font-style: normal;
@@ -46,6 +44,7 @@ main {
   font-weight: normal;
   font-size: 24px;
   line-height: 0%;
+  color: #2cc72c;
 }
 .product-txt {
   font-family: "Inter", sans-serif;
@@ -55,7 +54,6 @@ main {
   line-height: 0%;
 }
 .rating-txt {
-  font-family: ;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -64,7 +62,6 @@ main {
   margin-left: 8px;
 }
 .footer-txt {
-  font-family: Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -82,18 +79,28 @@ main {
   color: #d9dbe1;
   text-align: center;
 }
+/* Header */
+header {
+  padding: 0px 120px;
+}
 /* Buttons */
 .btn {
   width: 196px;
   height: 44px;
   padding: 10px 24px;
   border-radius: 41px;
-  background-color: #e02c6d;
+  background-color: #2cc72c;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+  border: none;
+  transition: 0.5s ease;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: rgb(125, 231, 12);
 }
 .fa-arrow-circle-right {
   margin-left: 8px;
@@ -101,30 +108,24 @@ main {
 /* Hero section */
 .hero {
   display: flex;
+  padding: 0px 120px;
 }
-.hero-right-bg {
-  position: relative;
-}
-.hero-right-img {
-  position: absolute;
-  top: 153px;
-  left: 772px;
-}
+
 /* Brand section */
 .brands {
   display: flex;
+  padding: 0px 165px;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 70px 45px 100px 45px;
-  border: 20px solid
-    linear-gradient(
-      90deg,
-      rgba(192, 204, 218, 0.1) 0%,
-      rgba(192, 204, 218, 0.6) 50.38%,
-      rgba(192, 204, 218, 0.1) 100%
-    );
+  margin: 50px 0;
 }
 /* Produts section */
+.popular-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 196px;
+}
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,6 +139,10 @@ main {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 15px;
+  transition: 0.5s ease;
+}
+.product:hover {
+  transform: scale(110%);
 }
 .fa-star,
 .fa-star-half-alt {
@@ -155,7 +160,7 @@ main {
   float: right;
   padding-right: 20px;
   text-decoration: none;
-  color: #e02c6d;
+  color: #2cc72c;
 }
 .fa-arrow-right {
   margin-left: 8px;
@@ -168,4 +173,91 @@ footer {
   height: 200px;
   width: auto;
   background-color: black;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  background-color: black;
+}
+.footer-icon {
+  margin-right: 10px;
+  color: white;
+}
+/* Responsive */
+
+/* Extra small devices pot (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo {
+    text-align: center;
+  }
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero-left {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .description-heading {
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .description {
+    text-align: center;
+    line-height: 25px;
+  }
+  .brands {
+    padding: 0px 130px;
+  }
+  .brand-logo {
+    height: 50px;
+    width: 100px;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+/* Medium devices (landscape tablets, 768px to 1080px) */
+@media only screen and (min-width: 600px) and (max-width: 1080px) {
+  .logo {
+    text-align: center;
+  }
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero-left {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+  .description-heading {
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .description {
+    text-align: center;
+    line-height: 25px;
+  }
+  .brand-logo {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
