@@ -63,6 +63,25 @@ main {
   font-family: "Roboto", sans-serif;
   margin-left: 8px;
 }
+.footer-txt {
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-copyright {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #d9dbe1;
+  text-align: center;
+}
 /* Buttons */
 .btn {
   width: 196px;
@@ -140,4 +159,13 @@ main {
 }
 .fa-arrow-right {
   margin-left: 8px;
+}
+/* Footer */
+footer {
+  margin-top: 100px;
+  box-sizing: border-box;
+  padding-top: 40px;
+  height: 200px;
+  width: auto;
+  background-color: black;
 }
